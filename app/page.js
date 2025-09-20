@@ -73,7 +73,7 @@ export default function Home() {
           <div className="border-2 border-amber-200 p-7 m-3">
             <h1 className="text-3xl">Langra</h1>
             <p className="m-3 text-amber-700">
-              These green blushing beauties are as sweet as can be! Each bite is firm,
+              These green blushing beauties are as sweet as can be Each bite is firm,
               juicy and better than the last.
             </p>
           </div>
