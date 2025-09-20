@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:5500';
+// const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:5500';
 
 const Cart = () => {
   const [user, setUser] = useState(null);
@@ -17,12 +17,12 @@ const Cart = () => {
   
   const fetchUserAndCart = async () => {
     try {
-      const userRes = await axios.get(`${API_BASE}/api/auth/me`, {
+      const userRes = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/me`, {
         withCredentials: true,
       });
       setUser(userRes.data);
 
-      const cartRes = await axios.get(`${API_BASE}/api/cart/view`, {
+      const cartRes = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/cart/view`, {
         withCredentials: true,
       });
       setCartItems(cartRes.data.items || []);
@@ -41,7 +41,7 @@ const Cart = () => {
   
   const handleOrderNow = async () => {
     try {
-      const res = await axios.post(`${API_BASE}/api/order/create`, {}, {
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/order/create`, {}, {
         withCredentials: true,
       });
       // alert('🎉 Order placed successfully!');
@@ -78,7 +78,7 @@ const Cart = () => {
   const handleDelete = async (fruitId) => {
     try {
       await axios.post(
-        `${API_BASE}/api/cart/remove`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/cart/remove`,
         { fruitId },
         { withCredentials: true }
       );
