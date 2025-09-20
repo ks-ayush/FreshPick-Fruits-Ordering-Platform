@@ -444,7 +444,7 @@ const Buyfruits = () => {
                 Purbi
                 <div className="badge badge-secondary">InStock</div>
               </h2>
-              <p>Purbi is commonly known in different regions of India, such as West Bengal, Jharkhand, North Bihar, and Uttar Pradesh. It's a medium-late season variety, known for its medium-large, oblong-conical fruits with a red tubercle pattern.  </p>
+              <p>Purbi is commonly known in different regions of India, such as West Bengal, Jharkhand, North Bihar, and Uttar Pradesh. It is a medium-late season variety, known for its medium-large, oblong-conical fruits with a red tubercle pattern.  </p>
               <div className="card-actions justify-end">
                 <div className="badge badge-outline text-2xl mt-1.5 text-yellow-400">₹ 190</div>
                 <button className="btn btn-outline btn-success" onClick={() => handleAddToCart("684c1a57ae498c0ccb1df4e9")}>Add To Cart</button>
