@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
+
 
 
 const Signin = () => {
+  const router=useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,10 +32,11 @@ const Signin = () => {
       // alert("✅ Registration successful!");
       // console.log(res.data);
       toast.success("Registration successful!");
+      router.push("/Login");
     } catch (error) {
       // console.error("❌ Registration error:", error.response?.data || error.message);
       // alert("❌ Registration failed. See console for details.");
-      toast.error("User Exits.");
+      toast.error("User already registered.");
     }
   };
 

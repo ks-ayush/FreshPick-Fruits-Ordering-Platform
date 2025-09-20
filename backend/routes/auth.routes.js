@@ -13,8 +13,8 @@ router.get('/me', verifyToken, getMe);
 router.post('/logout', (req, res) => {
     res.clearCookie('token', {
         httpOnly: true,
-        secure: false, // set to true in production with HTTPS
-        sameSite: 'lax', //None for cross-site cookies
+        secure: true, // set to true in production with HTTPS
+        sameSite: 'None', //None for cross-site cookies
         path: '/'
     });
     return res.json({ message: 'Logged out successfully' });
