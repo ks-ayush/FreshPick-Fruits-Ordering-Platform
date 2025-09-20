@@ -79,7 +79,7 @@ const Login = () => {
     return (
       <main className='min-h-screen flex flex-col '>
         <div className="text-center mt-20 ">
-          <h2 className="text-2xl font-semibold">✅ You're already logged in!</h2>
+          <h2 className="text-2xl font-semibold">✅ You are already logged in!</h2>
           <button
             className="btn btn-primary mt-4 mb-6"
             onClick={() => router.push('/Myspace')}

@@ -1,5 +1,5 @@
 "use client";
-import React, { use } from 'react'
+import React from 'react'
 import { AddToCart } from '../components/AddToCart.js';
 import { toast } from 'react-toastify';
 
@@ -15,7 +15,7 @@ const Buyfruits = () => {
 
       toast.success(result.message || 'Added to cart');
     } catch (err) {
-      toast.error(err.error || 'Failed to add to cart');
+      toast.error(err.message || 'Failed to add to cart');
     }
   };
   return (
@@ -40,7 +40,7 @@ const Buyfruits = () => {
                 Alphonso
                 <div className="badge badge-secondary">InStock</div>
               </h2>
-              <p>Alphonso mangoes, known as the "King of Mangoes," are a prized variety from India. They are renowned for their rich, creamy texture, and unique sweet and musky flavor</p>
+              <p>Alphonso mangoes, known as the King of Mangoes, are a prized variety from India. They are renowned for their rich, creamy texture, and unique sweet and musky flavor</p>
               <div className="card-actions justify-end">
                 <div className="badge badge-outline text-2xl mt-1.5 text-green-400">₹ 150</div>
                 <button className="btn btn-outline btn-warning" onClick={() => handleAddToCart('684c1a57ae498c0ccb1df4dd')}>Add To Cart</button>
@@ -61,7 +61,7 @@ const Buyfruits = () => {
                 Kesar
                 <div className="badge badge-secondary">InStock</div>
               </h2>
-              <p>Kesar mango, also known as Gir Kesar, is a popular mango variety originating from the Junagadh district of Gujarat, India. It's prized for its distinct saffron-colored flesh. </p>
+              <p>Kesar mango, also known as Gir Kesar, is a popular mango variety originating from the Junagadh district of Gujarat, India. It is prized for its distinct saffron colored flesh. </p>
               <div className="card-actions justify-end">
                 <div className="badge badge-outline text-2xl mt-1.5 text-green-400">₹ 120</div>
                 <button className="btn btn-outline btn-warning" onClick={() => handleAddToCart('684c1a57ae498c0ccb1df4de')}>Add To Cart</button>
@@ -83,7 +83,7 @@ const Buyfruits = () => {
                 Dasheri
                 <div className="badge badge-secondary">InStock</div>
               </h2>
-              <p>Dasheri mango, originating in India, is a sweet and fragrant cultivar highly prized for its unique flavor and aroma. It's known for its medium to large size, smooth yellow skin</p>
+              <p>Dasheri mango, originating in India, is a sweet and fragrant cultivar highly prized for its unique flavor and aroma. It is known for its medium to large size, smooth yellow skin</p>
               <div className="card-actions justify-end">
                 <div className="badge badge-outline text-2xl mt-1.5 text-green-400">₹ 130</div>
                 <button className="btn btn-outline btn-warning" onClick={() => handleAddToCart("684c1a57ae498c0ccb1df4df")}>Add To Cart</button>
@@ -379,7 +379,7 @@ const Buyfruits = () => {
                 Muzaffarpur Shahi
                 <div className="badge badge-secondary">InStock</div>
               </h2>
-              <p>The Shahi litchi, grown primarily in Muzaffarpur, Bihar, is a popular and prized variety of litchi known for its unique aroma, juicy pulp, and smaller-than-average seeds. It's recognized as a Geographical Indication (GI) and is famous for its "rose-scented" fragrance. </p>
+              <p>The Shahi litchi, grown primarily in Muzaffarpur, Bihar, is a popular and prized variety of litchi known for its unique aroma, juicy pulp, and smaller-than-average seeds. It is recognized as a Geographical Indication and is famous for its rose-scented fragrance. </p>
               <div className="card-actions justify-end">
                 <div className="badge badge-outline text-2xl mt-1.5 text-yellow-400">₹ 195</div>
                 <button className="btn btn-outline btn-success" onClick={() => handleAddToCart("684c1a57ae498c0ccb1df4ea")}>Add To Cart</button>
@@ -400,7 +400,7 @@ const Buyfruits = () => {
                 Swarna Roopa
                 <div className="badge badge-secondary">InStock</div>
               </h2>
-              <p>Swarna Roopa is a lychee cultivar developed in India by CHES, Ranchi, known for its high T.S.S. (total soluble solids) and fruit cracking resistance. It is a heavy bearing variety, producing an average of 90-100 kg of fruit per tree. Swarna Roopa is also known for its large fruits and is considered the first lychee variety developed in India . </p>
+              <p>Swarna Roopa is a lychee cultivar developed in India by CHES, Ranchi, known for its high T.S.S. total soluble solids and fruit cracking resistance. It is a heavy bearing variety, producing an average of 90-100 kg of fruit per tree. Swarna Roopa is also known for its large fruits and is considered the first lychee variety developed in India . </p>
               <div className="card-actions justify-end">
                 <div className="badge badge-outline text-2xl mt-1.5 text-yellow-400">₹ 200</div>
                 <button className="btn btn-outline btn-success" onClick={() => handleAddToCart("684c1a57ae498c0ccb1df4e8")}>Add To Cart</button>
@@ -422,7 +422,7 @@ const Buyfruits = () => {
                 kasba
                 <div className="badge badge-secondary">InStock</div>
               </h2>
-              <p>Kasba litchi is a well-known, commercially cultivated litchi variety, particularly in West Bengal, India. It is known for its large size, obliquely heart-shaped fruits with a carmine red tubercles on a green background. This variety is notable for its juicy, greyish-white pulp and a high total soluble solids (T.S.S.) content of 17%. </p>
+              <p>Kasba litchi is a well-known, commercially cultivated litchi variety, particularly in West Bengal, India. It is known for its large size, obliquely heart shaped fruits with a carmine red tubercles on a green background. This variety is notable for its juicy, greyish-white pulp and a high total soluble solids content of 17 percent. </p>
               <div className="card-actions justify-end">
                 <div className="badge badge-outline text-2xl mt-1.5 text-yellow-400">₹ 180</div>
                 <button className="btn btn-outline btn-success" onClick={() => handleAddToCart("684c1a57ae498c0ccb1df4e7")}>Add To Cart</button>
