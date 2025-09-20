@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className='container mx-auto px-4 py-4 bg-green-900 text-white'>
       <nav>
-        <div className='flex items-center'><h1>FRESH PICK :)</h1></div>
+        <div className='flex items-center'><h1>FRESH PICK</h1></div>
         <ul className='flex justify-end items-center gap-10'>
           <Link href={"/"}><li>
             <div className="avatar">
