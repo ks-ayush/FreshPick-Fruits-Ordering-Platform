@@ -3,7 +3,7 @@ import axios from 'axios';
 export const AddToCart = async (fruitId, quantity = 1) => {
   try {
     const response = await axios.post(
-      'http://localhost:5500/api/cart/add',
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/cart/add`,
       { fruitId, quantity },
       { withCredentials: true } // important for sending cookies
     );

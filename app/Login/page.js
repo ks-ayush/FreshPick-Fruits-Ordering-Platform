@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:5500';
+// const API_BASE = process.env.NEXT_PUBLIC_API_BASE ;
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -19,7 +19,7 @@ const Login = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await axios.get(`${API_BASE}/api/auth/me`, {
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/me`, {
           withCredentials: true,
         });
         if (res.data) {
@@ -37,7 +37,7 @@ const Login = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:5500/api/auth/logout", {}, {
+      await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/logout`, {}, {
         withCredentials: true // important for sending cookies
       });
 
@@ -53,7 +53,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        `${API_BASE}/api/auth/login`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/login`,
         { email, password },
         { withCredentials: true }
       );

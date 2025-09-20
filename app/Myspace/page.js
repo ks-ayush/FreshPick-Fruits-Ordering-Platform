@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:5500';
+// const API_BASE = process.env.NEXT_PUBLIC_API_BASE ;
 
 const MySpace = () => {
   const [user, setUser] = useState(null);
@@ -13,12 +13,12 @@ const MySpace = () => {
   useEffect(() => {
     const fetchUserAndOrders = async () => {
       try {
-        const userRes = await axios.get(`${API_BASE}/api/auth/me`, {
+        const userRes = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/me`, {
           withCredentials: true,
         });
         setUser(userRes.data);
 
-        const ordersRes = await axios.get(`${API_BASE}/api/myspace`, {
+        const ordersRes = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/myspace`, {
           withCredentials: true,
         });
         setOrders(ordersRes.data.orders || []);
