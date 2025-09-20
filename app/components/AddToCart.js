@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const addToCart = async (fruitId, quantity = 1) => {
+export const AddToCart = async (fruitId, quantity = 1) => {
   try {
     const response = await axios.post(
       'http://localhost:5500/api/cart/add',

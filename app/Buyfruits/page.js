@@ -1,6 +1,6 @@
 "use client";
 import React, { use } from 'react'
-import { addToCart } from '../components/AddToCart.js';
+import { AddToCart } from '../components/AddToCart.js';
 import { toast } from 'react-toastify';
 
 
@@ -11,7 +11,7 @@ const Buyfruits = () => {
       return;
     }
     try {
-      const result = await addToCart(fruitId);
+      const result = await AddToCart(fruitId);
 
       toast.success(result.message || 'Added to cart');
     } catch (err) {
