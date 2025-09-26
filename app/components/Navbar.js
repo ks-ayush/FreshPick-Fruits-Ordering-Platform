@@ -1,9 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-// import Signin from '../Signin/page'
-// import Login from '../Login/page'
-// import Myspace from '../Myspace/page'
-// import Cart from '../Cart/page'
 
 const Navbar = () => {
   return (

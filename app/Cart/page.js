@@ -5,9 +5,6 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
-
-// const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:5500';
-
 const Cart = () => {
   const [user, setUser] = useState(null);
   const [cartItems, setCartItems] = useState([]);

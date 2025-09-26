@@ -5,7 +5,7 @@ export const AddToCart = async (fruitId, quantity = 1) => {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/cart/add`,
       { fruitId, quantity },
-      { withCredentials: true } // important for sending cookies
+      { withCredentials: true } 
     );
     return response.data;
   } catch (error) {

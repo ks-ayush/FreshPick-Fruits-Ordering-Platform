@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
 
-// const API_BASE = process.env.NEXT_PUBLIC_API_BASE ;
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -38,12 +38,12 @@ const Login = () => {
   const handleLogout = async () => {
     try {
       await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/logout`, {}, {
-        withCredentials: true // important for sending cookies
+        withCredentials: true 
       });
 
       setIsLoggedIn(false);
 
-      // Redirect to login
+      
       router.push("/Login");
     } catch (error) {
       // console.error("Logout failed:", error);
